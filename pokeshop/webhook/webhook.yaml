@@ -1,0 +1,15 @@
+apiVersion: webhookconfig.keptn.sh/v1beta1
+kind: WebhookConfig
+metadata:
+  name: webhook-configuration
+spec:
+  webhooks:
+    - type: sh.keptn.event.evaluation.>
+      requests:
+        - url: http://tracetest-beta.tracetest-beta.svc.cluster.local/api/tests
+          payload: ""
+          headers: []
+          method: GET
+      subscriptionID: 1c9bdce6-bc38-434e-bdf1-3e72f2bafe8a
+      sendFinished: true
+      sendStarted: true
